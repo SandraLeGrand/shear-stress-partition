@@ -14,9 +14,9 @@ Winter 2018/2019
 This repository includes *in situ* and derived datasets used by Ziegler et al. for the manuscript "Insights to shear stress partitioning from land surface albedo" under consideration for pubication in JGR-Atmospheres.
 
 ## Data
-Field data used for this experiment were collected from two study sites at the US Department of Agriculture - Agricultural Research Service (USDA-ARS) Jornada Experimental Range (JER) in southern New Mexico, USA (Webb et al., 2016a) and ten National Wind Erosion Research Network sites (Webb  et  al., 2016b). Data for the WEN sites can be downloaded from the public WEN data portal winderosionnetwork.org/data-portal/public-data. Data for the JER sites, however, must be collected directly from data logger memory cards and converted to readable format using proprietary Campbell Scientific decompression software.
+Field data used for this experiment were collected from two study sites at the US Department of Agriculture - Agricultural Research Service (USDA-ARS) Jornada Experimental Range (JER) in southern New Mexico, USA (Webb et al., 2016a) and ten National Wind Erosion Research Network sites (Webb  et  al., 2016b). Data for the WEN sites can be downloaded from the public WEN data portal winderosionnetwork.org/data-portal/public-data.
 
-*In situ* and derived data values for JER Site 3 (Playa) and JER Site 4 (Open shrubland) for the period 1 April 2018 to 31 September 2018 are included in this repository.  Detailed biophysical characteristics for each WEN and JER site are provided in Table 3 of Webb et al. (2016a) and Table 1 of Webb et al. (2016b), respectively. Although there are three other JER sites (sites 1, 2, and 5), only data from JER Site 3 and JER Site 4 are provided here.  
+*In situ* and derived data values for JER Site 3 (Playa) and JER Site 4 (Open shrubland) for the period 1 April 2018 to 31 September 2018 are included in this repository.  Detailed biophysical characteristics for each WEN and JER site are provided in Table 3 of Webb et al. (2016a) and Table 1 of Webb et al. (2016b), respectively. Although there are three other JER sites (sites 1, 2, and 5), only data from JER Site 3 and JER Site 4 are provided here and used for the analysis.  
 
 **Minute-frequency datasets:**<br/>
 **TIMESTAMP** <- Datetime stamp in YYYY-mm-dd HH:MM:SS format (local standard time)<br/>
@@ -38,7 +38,7 @@ Field data used for this experiment were collected from two study sites at the U
 **FV_regress** <- Friction velocity diagnosed from linear regression (m s^-1)<br/>
 **z0_regress** <- Aerodynamic roughness length diagnosed from linear regression (m)<br/>
 **z0_filt** <- Aerodynamic roughness length diagnosed from linear regression with filters applied (m)<br/>
-**z0_daily** <- Average 24hour roughness length estimated from wind speed profile (m)<br/>
+**z0_daily** <- Average 24hour roughness length estimated from wind speed profile calculated from z0_filt (m)<br/>
 **FV_pro** <- Wind speed profile-based friction velocity (m s^-1)<br/><br/>
 
 **Daily datasets:**<br/>
@@ -65,6 +65,8 @@ MODIS albedo data are derived from the daily 500m MCD43A3 product.
 Cloud cover fraction data were collected by the Las Cruces, NM ASOS station available online via https://mesonet.agron.iastate.edu/request/download.phtml?network=NM_ASOS. Following METAR reporting standards, we assumed  clear skies (CLR) = 0/8 cloud cover, few clouds (FEW) = 2/8 cloud cover, scattered clouds (SCT) = 4/8 cloud cover, broken clouds (BKN) = 6/8 cloud cover, overcast (OVC) = 8/8 cloud cover, and 8/8 cloud cover when vertical visibility obscrurants (VV) were reported.
 
 Filtered daily normalized total and soil surface friction velocity values only include rainfree and clear sky time periods in their calculatiton.    
+
+FV_pro is estimated using z0_daily, WindSpd_15AVG_480cm, and the law of the wall equation.
 
 ## References
 Webb, N. P., Herrick, J. E., Van Zee, J. W., Courtright, E. M., Hugenholtz, C. H., Zobeck, T. M., Okin, G. S., Barchyn, T. E., 
