@@ -50,7 +50,7 @@ Field data used for this experiment were collected from two study sites at the U
 **LandSatR** <- Surface reflectance obtained from 30m Landsat 8 cloud-free surface reflectance product (mm)<br/>
 **Wns_rad** <- Rescaled normalized albedo determined from net radiometer<br/>
 **Wns_modis** <- Rescaled normalized albedo determined from MODIS <br/>
-**ustarUf_pro** <- Daily average normalized friction velocity determined from wind speed profile<br/>
+**ustarUh_pro** <- Daily average normalized friction velocity determined from wind speed profile<br/>
 **uTstarUh_rad** <- Daily normalized total friction velocity determined from net radiometer<br/>
 **usstarUh_rad** <- Daily normalized friction velocity at the soil surface determined from net radiometer<br/>
 **uTstarUh_rad_filt** <- Filtered daily normalized total friction velocity determined from net radiometer<br/>
