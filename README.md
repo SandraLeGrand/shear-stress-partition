@@ -1,6 +1,8 @@
 # Shear Stress Partitioning
 Data for estimating friction velocity and drag partition.
 
+[![DOI](https://zenodo.org/badge/220484252.svg)](https://zenodo.org/badge/latestdoi/220484252)
+
 ## Authors
 * Nancy P. Ziegler (ERDC)
 * Sandra L. LeGrand (ERDC)
